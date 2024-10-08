@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <script>
+        function dice() {
+            return Math.floor(Math.random() * 6 + 1)
+        }
+
+        function showRandomImage() {
+            const d = dice()
+
+            let src
+            if (d === 1)
+                src = "img/1.png"
+            else if (d === 2)
+                src = "img/2.png"
+            else if (d === 3)
+                src = "img/3.png"
+            else if (d === 4)
+                src = "img/4.png"
+            else if (d === 5)
+                src = "img/5.png"
+            else if (d === 6)
+                src = "img/6.png"
+            else
+                alert('Ugyldig terningkast?!?!')
+
+            console.log('dice: ', d)
+            console.log('setting source to: ', src)
+            const img = document.getElementById('img')
+            img.src = src
+        }
+    </script>
+</head>
+<body>
+
+<fieldset>
+    <legend>Terning</legend>
+    <button onclick="showRandomImage()">Kast terning!</button>
+</fieldset>
+
+<img alt="her kommer bildet" id="img" src="img\Skjermbilde 2024-09-03 100930.png">
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <script>
+        function kjørQuiz() {
+            let score = 0
+            
+            
+            const a1 = prompt('Hva heter Amir"?')
+            if (a1 ==='amir' || a1 === 'Amir Iminov') {
+                alert('Riktig!')
+                score++
+            } else {
+                alert('Beklager, det var feil')
+            }
+
+            const a2 = prompt('Hvem er Amir?')
+            if (a1 ==='amir') {
+                alert('Riktig!')
+                score++
+            } else {
+                alert('Beklager, det var feil')
+            }
+
+            alert('Din poengsum: ' + score)
+        }
+    </script>
+</head>
+<body>
+
+<form>
+    <button onclick="kjørQuiz()">Start quiz!</button>
+</form>
+
+</body>
+</html>
